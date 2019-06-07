@@ -1,0 +1,405 @@
+console init done
+
+
+U-Boot 2012.10 (Dec 15 2017 - 16:03:10) for B/A17W IPBOX tw9912 (RL)
+
+HAL:  20151223
+DRAM:  64 MiB
+Flash: 16 MiB
+16 MiB
+NAND:  SPINAND MID = 0xff, DID = 0xffff, Data = 0x1ffffff !spinand_board_init[1581]: No support this SPI nand!
+SF: Detected W25Q128FV with page size 256 B, sector size 64 KiB, total size 16 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Net:   arm_freq(600MHz)..............0x112032
+use int MII..............
+gk7101
+Hit any key to stop autoboot:  0
+[PROCESS_SEPARATORS] sf probe;sf read 0xc1000000 0xe0000 0x1a0000;bootm 0xc1000000
+SF: Detected W25Q128FV with page size 256 B, sector size 64 KiB, total size 16 MiB
+put param to memory
+mem size (40)
+bsb size (2)
+
+the kernel image is zImage or Image
+entry = 0xc1000000
+## Transferring control to Linux (at address c1000000)...
+
+Starting kernel ...
+
+machid = 3988 r2 = 0xc0000100
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0
+[    0.000000] Linux version 3.4.43-gk (root@DII) (gcc version 4.6.1 (crosstool-NG 1.18.0) ) #36 PREEMPT Wed Jan 10 11:31:22 CST 2018
+[    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+[    0.000000] CPU: VIPT aliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: Goke GK7102 RB_JXH42 board V2.00
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] AHB: 0x90000000  0xf2000000  -- 0x1000000
+[    0.000000] APB: 0xa0000000  0xf3000000  -- 0x1000000
+[    0.000000] PPM: 0xc0000000  0xc0000000  -- 0x200000
+[    0.000000] BSB: 0xc2a00000  0xf5000000  -- 0x200000
+[    0.000000] DSP: 0xc2c00000  0xf6000000  -- 0x1400000
+[    0.000000] hal version = 20151223
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 10160
+[    0.000000] Kernel command line: console=ttySGK0,115200 noinitrd mem=40M rw root=/dev/mtdblock5 rootfstype=squashfs init=linuxrc phytype=0
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 40MB = 40MB total
+[    0.000000] Memory: 35580k/35580k available, 5380k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xff600000 - 0xffe00000   (   8 MB)
+[    0.000000]     vmalloc : 0x83000000 - 0xff000000   (1984 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x82800000   (  40 MB)
+[    0.000000]     modules : 0x7f000000 - 0x80000000   (  16 MB)
+[    0.000000]       .text : 0x80008000 - 0x80454000   (4400 kB)
+[    0.000000]       .init : 0x80454000 - 0x80474000   ( 128 kB)
+[    0.000000]       .data : 0x80474000 - 0x8049ef80   ( 172 kB)
+[    0.000000]        .bss : 0x8049efa4 - 0x804d1398   ( 201 kB)
+[    0.000000] NR_IRQS:128
+[    0.000000] >> gk7101 init irq vic1...
+[    0.000000] >> gk7101 init irq vic2...
+[    0.000000] gk7101 init vic...
+[    0.000000] mach gk7101 init timer...
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 4294967286ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [ttySGK0] enabled
+[    0.010000] Calibrating delay loop... 597.60 BogoMIPS (lpj=2988032)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 512
+[    0.080000] CPU: Testing write buffer coherency: ok
+[    0.090000] Setting up static identity map for 0xc0574f20 - 0xc0574f58
+[    0.100000] NET: Registered protocol family 16
+[    0.110000] gk7101 init timer...
+[    0.110000] Init HW timer for DSP communication
+[    0.120000] gk7101 init gpio...
+[    0.120000] gpiochip_add: registered GPIOs 0 to 63 on device: gk7101-gpio0
+[    0.130000] gpio map init...
+[    0.130000] create proc dir
+[    0.130000] gk7101 register devices 8
+[    0.140000] gk7101 register I2C
+[    0.280000] bio: create slab <bio-0> at 0
+[    0.290000] SCSI subsystem initialized
+[    0.290000] spi spi.0: gk7101 SPI Controller 0 created
+[    0.300000] spi spi.0: master is unqueued, this is deprecated
+[    0.310000] usbcore: registered new interface driver usbfs
+[    0.310000] usbcore: registered new interface driver hub
+[    0.320000] usbcore: registered new device driver usb
+[    0.320000] i2c regbase: 0xf3003000
+[    0.330000] i2c i2c.0: i2c irq:registers 9
+[    0.330000] i2c i2c.0: GK7101 I2C[0] adapter[i2c-0] probed!
+[    0.350000] cfg80211: Calling CRDA to update world regulatory domain
+[    0.350000] FS-Cache: Loaded
+[    0.360000] CacheFiles: Loaded
+[    0.370000] gk7101-sd gk7101-sd.0: Slot0 req_size=0x00010000, segs=16, seg_size=0x00010000
+[    0.400000] gk7101-sd gk7101-sd.0: GK7101 SD/MMC[0] has 1 slots @ 46000000Hz, [0x09e130b0:0x00000000]
+[    0.410000] NET: Registered protocol family 2
+[    0.410000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.420000] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.430000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.440000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.450000] TCP: reno registered
+[    0.450000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.460000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.460000] NET: Registered protocol family 1
+[    0.470000] RPC: Registered named UNIX socket transport module.
+[    0.480000] RPC: Registered udp transport module.
+[    0.480000] RPC: Registered tcp transport module.
+[    0.490000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.490000] mdma init...
+[    0.500000] mdma request irq: 54
+[    0.510000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.510000] NFS: Registering the id_resolver key type
+[    0.520000] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.530000] msgmni has been set to 69
+[    0.540000] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.550000] io scheduler noop registered
+[    0.550000] io scheduler deadline registered
+[    0.560000] io scheduler cfq registered (default)
+[    0.560000] uart.0: ttySGK0 at MMIO 0xa0005000 (irq = 31) is a gk7101uart
+[    0.570000] uart.1: ttySGK1 at MMIO 0xa001f000 (irq = 15) is a gk7101uart
+[    0.580000] uart.2: ttySGK2 at MMIO 0xa001e000 (irq = 27) is a gk7101uart
+[    0.600000] brd: module loaded
+[    0.600000] loop: module loaded
+[    0.610000] adc initialized (10:11)
+[    0.610000] slram: not enough parameters.
+[    0.620000] speed_mod is 0
+[    0.620000] USE 1X mode read and 1X mode write
+[    0.630000] gk7101_flash gk7101_flash.0: W25Q128FV (16384 Kbytes)
+[    0.630000] Creating 8 MTD partitions on "gk7101_flash":
+[    0.640000] 0x000000000000-0x000000040000 : "uboot"
+[    0.650000] 0x000000040000-0x000000050000 : "ubootenv"
+[    0.650000] 0x000000050000-0x000000070000 : "user"
+[    0.660000] 0x000000070000-0x0000000e0000 : "config"
+[    0.670000] 0x0000000e0000-0x000000280000 : "kernel"
+[    0.680000] 0x000000280000-0x000000630000 : "rootfs"
+[    0.680000] 0x000000630000-0x000000800000 : "resource"
+[    0.690000] 0x000000000000-0x000000800000 : "all"
+[    0.700000] GKETH_init
+[    0.700000] [GKETH_drv_probe] eth_base = 0xf200e000
+[    0.710000] mii id = 0
+[    0.710000] ###### PHY Reset.1.0.2
+[    0.830000] mdiobus_register: PHY[0] whose id 0x00000000
+[    0.830000] goke MII Bus: probed
+[    0.840000] gk7101-eth gk7101-eth.0: MAC Address[02:11:22:a3:a0:00].
+[    0.840000] usbcore: registered new interface driver cdc_wdm
+[    0.850000] Initializing USB Mass Storage driver...
+[    0.860000] usbcore: registered new interface driver usb-storage
+[    0.860000] USB Mass Storage support registered.
+[    0.870000] usbcore: registered new interface driver libusual
+[    0.880000] musb-hdrc: version 6.0, ?dma?, otg (peripheral+host)
+[    0.880000] musb phy Begin initial sequence ...
+[    1.130000] gk7101 musb init end...
+[    1.130000]
+[    1.130000]
+[    1.130000] dma controller create ok
+[    1.140000] musb-hdrc musb-hdrc: MUSB HDRC host driver
+[    1.150000] musb-hdrc musb-hdrc: new USB bus registered, assigned bus number 1
+[    1.150000] vm : ffde0000, phy : c25a0000
+[    1.160000] dma_buf alloc ok!
+[    1.160000] hub 1-0:1.0: USB hub found
+[    1.170000] hub 1-0:1.0: 1 port detected
+[    1.170000] musb-hdrc musb-hdrc: USB Host mode controller at f0006000 using DMA, IRQ 26
+[    1.180000] platform add gk7101 musb...
+[    1.190000] input: GKInput as /devices/virtual/input/input0
+[    1.190000] Protocol NEC[0]
+[    1.200000] ir request irq: 62
+[    1.200000] IR Host Controller probed!
+[    1.200000] gk7101 rtc init...
+[    1.210000] rtc base: 0xf2080000
+[    1.210000] os read tm: t=0
+[    1.210000] gk7101-rtc gk7101-rtc: rtc core: registered gk7101-rtc as rtc0
+[    1.220000] i2c /dev entries driver
+[    1.230000] gk7101_wdt: GK7101 Watchdog Timer, (c) 2014 Goke Microelectronics
+[    1.230000] [gk7101_wdt_init]: init
+[    1.240000] [gk7101_wdt_probe]: probe
+[    1.240000] [gk7101_wdt_probe]: probe mapped wdt_base=f3006000
+[    1.250000] watchdog inactive, reset disabled, irq disabled
+[    1.260000] sdhci: Secure Digital Host Controller Interface driver
+[    1.260000] sdhci: Copyright(c) Pierre Ossman
+[    1.270000] IPv4 over IPv4 tunneling driver
+[    1.270000] gre: GRE over IPv4 demultiplexor driver
+[    1.280000] ip_gre: GRE over IPv4 tunneling driver
+[    1.290000] TCP: cubic registered
+[    1.290000] Initializing XFRM netlink socket
+[    1.300000] NET: Registered protocol family 10
+[    1.300000] IPv6 over IPv4 tunneling driver
+[    1.310000] NET: Registered protocol family 17
+[    1.320000] NET: Registered protocol family 15
+[    1.320000] lib80211: common routines for IEEE802.11 drivers
+[    1.330000] Registering the dns_resolver key type
+[    1.330000] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    1.340000] os read tm: t=0
+[    1.350000] gk7101-rtc gk7101-rtc: setting system clock to 1970-01-01 00:00:00 UTC (0)
+[    1.370000] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    1.380000] Freeing init memory: 128K
+[    1.630000] usb 1-1: new high-speed USB device number 2 using musb-hdrc
+Starting logging: OK
+----------Starting mdev......
+Starting mdev...
+Initializing random number generator... read-only file system detected...done
+Starting network...
+insmod wifi driver!
+insmod mt7601Usta.ko
+[    4.670000] rtusb init rt2870 --->
+[    4.690000] ==>WaitForAsicReady MAC_CSR0=0x76010500
+[    4.710000] ==>WaitForAsicReady MAC_CSR0=0x76010500
+[    4.710000] NumOfChan ===> 58
+[    4.730000] MSC msc_proc_create: 8320f000
+[    4.770000] usbcore: registered new interface driver rt2870
+Starting ipc..
+chmod: /usr/local/bin/startup.sh: Read-only file system
+[    5.090000] net eth0: ###### GKETH_start_hw
+[    5.100000] net eth0: ###### GKETH_phy_start_aneg...
+[    5.110000] ADDRCONF(NETDEV_UP): eth0: link is not ready
+mount /dev/mtdblock3 -> /opt/custom
+mount /dev/mtdblock6 -> /opt/resource
+[    5.270000] dsp: module license 'Proprietary' taints kernel.
+[    5.270000] Disabling lock debugging due to kernel taint
+[    5.360000] gk_vi_init
+[    5.390000]  request_irq...24 ok-- video_sync
+[    5.390000]  request_irq...59 ok-- video_frame_last_pixel
+[    5.420000]  request_irq...61 ok-- video_frame
+[    5.420000]  gk7101_is_valid_gpio_irq...
+[    5.520000] crypto initialized (10:11)
+Media driver version (gcc version 4.6.1 (crosstool-NG 1.18.0) (uClibc)) v1.1.2 #svn r11533 Wed Oct 11 16:29:50 CST 2017
+[    5.870000] sensor board reset...
+[    6.100000] PHY: 0:00 - Link is Up - 100/Full
+[    6.100000] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    6.250000] sensor board reset...
+Do You Want to Run Application ? (y/n)
+...start netcam application ...
+
+Welcome to Goke Linux
+goke login: nodef CUS_SENSOR_SC1045
+support audio echo cancellation.
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_system_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/../../../root/sys_info
+
+>>>>>>sys_info:
+chip_type : gk7102
+sensor_type : ar0130_ip0x
+svn_version : ip02
+make_date : 201807061856
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_audio_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_video_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_video.c, Line: 234 ]  arraySize=4
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_image_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_channel_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_channel.c, Line: 255 ]  channel arraySize=4
+
+[APP INFO] [ src/cfg/cfg_channel.c, Line: 276 ]  shelter rect arraySize=4
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_network_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_md_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_snap_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_record_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_alarm_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_ptz_cfg.cjson
+
+[APP INFO] [ src/cfg/cfg_common.c, Line: 67 ]  to load /opt/custom/cfg/gk_user_cfg.cjson
+
+[FUN]check_dev_info_crc32 [LINE]612  crc32_val:0xb877f6ed  device_info->crc32_val:0xb877f6ed
+[FUN]get_dev_info_from_mtd [LINE]689  device_id     :EDUUSEZKWJD47W94111A
+[FUN]check_dev_info_crc32 [LINE]612  crc32_val:0xb877f6ed  device_info->crc32_val:0xb877f6ed
+[FUN]get_dev_info_from_mtd [LINE]689  device_id     :EDUUSEZKWJD47W94111A
+[APP INFO] [ src/cfg/cfg_common.c, Line: 27 ]  to save /opt/custom/cfg/gk_network_cfg.cjson
+
+[APP INFO] [ src/update/netcam_update.c, Line: 78 ]  Create update thread success
+set pthread name:222, timer_thread, timer_thread pid:130 tid:132
+set pthread name:18, upgrade_thread, upgrade_thread pid:130 tid:133
+support work queue
+[gk7101_watchdog.c:  73] get watchdog timeout:60
+
+[APP INFO] [ src/audio/netcam_audio.c, Line: 53 ]  enter netcam_audio_init!
+enter gk_audio_init.
+[ERROR] support audio echo cancellation....
+[ERROR] support audio echo cancellation....
+[ERROR] support audio echo cancellation....
+[APP INFO] [ src/audio/netcam_audio.c, Line: 68 ]  support audio vi.
+[ThreadID 0x2b2574d0] work queue thread start!
+[APP INFO] [ src/audio/netcam_audio.c, Line: 93 ]  support audio vo.
+
+>>148f:7601
+
+
+Welcome to Goke Linux
+goke login: >>ra0
+
+[    9.910000] 1. LDO_CTR0(6c) = a64799, PMU_OCLEVEL c
+[    9.920000] 2. LDO_CTR0(6c) = a6478d, PMU_OCLEVEL 6
+[    9.930000] ==>WaitForAsicReady MAC_CSR0=0x76010500
+[    9.990000] ==>WaitForAsicReady MAC_CSR0=0x76010500
+[   10.670000] NumOfChan ===> 14
+[   10.700000] 0x1300 = 00064300
+child 177 terminated
+wifi handle:ra0
+[APP INFO] [ src/net/netcam_network.c, Line: 748 ]  Wifi is STA mode
+>>148f:7601
+
+file:/proc/modules ret:1
+file:/proc/modules ret:1
+cmd:/usr/bin/find /lib/modules -name "mt7601Usta.ko"|/bin/sed '2d'|/usr/bin/xargs /sbin/insmod
+insmod: can't insert '/lib/modules/3.4.43-gk/extra/mt7601Usta.ko': File exists
+child 189 terminated
+child 194 terminated
+[APP INFO] [ src/net/netcam_network.c, Line: 810 ]  wifi on is OK
+
+[APP INFO] [ src/net/netcam_network.c, Line: 550 ]  netcam_cfg_network_save!!
+[APP INFO] [ src/cfg/cfg_common.c, Line: 27 ]  to save /opt/custom/cfg/gk_network_cfg.cjson
+
+[APP INFO] [ src/net/netcam_network.c, Line: 550 ]  netcam_cfg_network_save!!
+[APP INFO] [ src/cfg/cfg_common.c, Line: 27 ]  to save /opt/custom/cfg/gk_network_cfg.cjson
+
+child 197 terminated
+[gk7101_network.c:  44] gk_network_start, dev:eth0, enable:1
+
+[gk7101_network.c:  45] gk_network_start, dev:eth0, dhcp enable:1
+
+[gk7101_network.c:  46] gk_network_start, dev:eth0, ip:192.168.1.231
+
+[gk7101_network.c:  47] gk_network_start, dev:eth0, gateway:192.168.1.1
+
+[gk7101_network.c:  48] gk_network_start, dev:eth0, dns1:8.8.8.8
+
+[gk7101_network.c:  49] gk_network_start, dev:eth0, dns2:114.114.114.114
+
+[gk7101_network.c:  50] gk_network_start, dev:eth0, mac:
+
+[gk7101_network.c:  51] gk_network_start, dev:eth0, mask:255.255.255.0
+
+  #ifconfig eth0 up
+enter waitpid
+exit waitpid[0]
+[ linux_network.c: 480] hwaddr content error,device:eth0
+
+  #route del default gw 0.0.0.0 dev eth0
+enter waitpid
+route: SIOCDELRT: No such process
+exit waitpid[256]
+child 203 terminated
+[ linux_network.c: 633] error!!:No child processes,device:eth0
+
+[gk7101_network.c:  44] gk_network_start, dev:ra0, enable:1
+
+[gk7101_network.c:  45] gk_network_start, dev:ra0, dhcp enable:1
+
+[gk7101_network.c:  46] gk_network_start, dev:ra0, ip:192.168.3.26
+
+[gk7101_network.c:  47] gk_network_start, dev:ra0, gateway:192.168.3.1
+
+[gk7101_network.c:  48] gk_network_start, dev:ra0, dns1:8.8.8.8
+
+[gk7101_network.c:  49] gk_network_start, dev:ra0, dns2:114.114.114.114
+
+[gk7101_network.c:  50] gk_network_start, dev:ra0, mac:
+
+[gk7101_network.c:  51] gk_network_start, dev:ra0, mask:255.255.255.0
+
+[    gk7101_sys.c: 103] enter GK SDK_init_sys. streamNum=3
+
+GOKE ADI: R(11533) LIBC(uClibc) (gcc version 4.6.1 (crosstool-NG 1.18.0) ) Fri Feb 24 00:19:21 CST 2017
+[PRI] firmware version:74.
+[APP ERR] [ src/video/netcam_video.c, Lin[   12.360000] i2c i2c.0: i2c[60]:gk7101_i2c_irq in wrong state[0x9]
+e:93 ]  COM PORT INIT WITH BAUD RATE:[2400].
+[    gk7101_isp.c:1632] gk_isp_init In
+
+[    gk7101_isp.c:1677] gk_isp_init_start enter
+
+Image library version (gcc version 4.6.1 (crosstool-NG 1.18.0) (uClibc)) v1.1.2 #svn r11533 Fri Feb 24 00:19:35 CST 2017
+[    gk7101_isp.c:1705] gadi_isp_load_param: error -8007
+
+[    gk7101_isp.c:1731] gk_isp_init_start leave
+
+[    gk7101_isp.c:1639] gk_isp_init success
+
+iwe->u.essid.flags:[1] && ssid_len:[7].
+wifi list get ssid:[EMFW_I].
+iwe->u.essid.flags:[1] && ssid_len:[7].
+wifi list get ssid:[EMFW_I].
+iwe->u.essid.flags:[1] && ssid_len:[8].
+wifi list get ssid:[1e48807].
+iwe->u.essid.flags:[1] && ssid_len:[8].
+wifi list get ssid:[Gerahom].
+[APP ERR] [ src/net/netcam_network.c, Line:1382 ]  ssid not exists, maybe hidden. use the encrypt set by user or default.
+[APP INFO] [ src/net/netcam_network.c, Line: 1391 ]  auto connect ssid:[RL_PRODUCT_AP], encrypt:[8] enabele dhcp:[No] without scan ssid list.
+
+
+Welcome to Goke Linux
+goke login: default
