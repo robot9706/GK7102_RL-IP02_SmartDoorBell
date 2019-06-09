@@ -7,7 +7,7 @@
 * WiFi: Mediatek MT7601 (?)
 * LAN: HanRun HR681686 (?)
 
-Flash layout:
+#### Flash layout:
 * MTD defined layout:
 	* 0x000000-0x040000 : "uboot"
 	* 0x040000-0x050000 : "ubootenv"
@@ -23,11 +23,21 @@ Flash layout:
 	* 0xA80000 : "rootfs"
 	* 0xE30000 : "resource"
 
-Resources:
+#### Resources:
 * U-Boot startuplog: Logs/uboot.txt
 * Binwalk on the flash dump: Logs/binwalk.txt
 * MTD flashlayout: Logs/flash_layout_mtd.txt
 * Factory rootfs and resourcefs located in the "FileSystems" folder.
 
-## Device
+#### Linux users:
+* root/("*plKJ0ox4sO46Y*" hashed password - unhashed: *unknown*)
+* default/(no password)
+
+#### Rooting:
+Flash the modified rootfs from "FileSystems/rooted-rootfs.squashfs" to the "rootfs" partition on the flash
+
+The root password is now blank/removed, so the login is "root" and no password.
+
+
+### Device
 ![Actual device](Pictures/Device.jpg)
