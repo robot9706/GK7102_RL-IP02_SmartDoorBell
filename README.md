@@ -27,6 +27,7 @@ Resources:
 * U-Boot startuplog: Logs/uboot.txt
 * Binwalk on the flash dump: Logs/binwalk.txt
 * MTD flashlayout: Logs/flash_layout_mtd.txt
+* Factory rootfs and resourcefs located in the "FileSystems" folder.
 
 ## Device
 ![Actual device](Pictures/Device.jpg)
