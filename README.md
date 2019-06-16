@@ -38,6 +38,12 @@ Flash the modified rootfs from "FileSystems/rooted-rootfs.squashfs" to the "root
 
 The root password is now blank/removed, so the login is "root" and no password.
 
+### RTSP:
+RTSP camera streams can be accessed using the following URL: RTSP: rtsp://[DeviceIP]:554/stream#
+
+Where stream# can go from 0 to 2, 0 is the highest resolution.
+
+For example: rtsp://192.168.0.200:554/stream0
 
 ### Device
 ![Actual device](Pictures/Device.jpg)
